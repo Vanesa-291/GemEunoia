@@ -1,0 +1,96 @@
+// ============================================
+// HERO (Sección principal de inicio)
+// ============================================
+
+.hero {
+    background-color: $color-background;
+    padding: 6rem $spacing-xlarge;
+    text-align: center;
+    
+    h1 {
+        font-size: $font-size-hero;
+        color: $color-dark;
+        margin-bottom: $spacing-medium;
+    }
+    
+    p {
+        font-size: $font-size-large;
+    }
+}
+
+.hero-imagen-section {
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    @include flex-center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-imagen-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/pulsera-01.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.hero-imagen-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include gradient($color-overlay, rgba(0, 0, 0, 0.5));
+    z-index: 2;
+}
+
+.hero-imagen-content {
+    position: relative;
+    z-index: 3;
+    padding: $spacing-xlarge;
+    max-width: 900px;
+    
+    h1 {
+        font-size: $font-size-hero-large;
+        color: $color-white;
+        margin-bottom: $spacing-large;
+        font-weight: bold;
+        @include text-shadow;
+    }
+    
+    p {
+        font-size: 1.4rem;
+        color: $color-white;
+        margin-bottom: 2.5rem;
+        line-height: 1.8;
+        @include text-shadow(rgba(0,0,0,0.5));
+    }
+}
+
+@include responsive(mobile) {
+    .hero {
+        h1 {
+            font-size: $font-size-xxlarge;
+        }
+    }
+    
+    .hero-imagen-section {
+        height: 80vh;
+        min-height: 500px;
+    }
+    
+    .hero-imagen-content {
+        h1 {
+            font-size: 2.2rem;
+        }
+        
+        p {
+            font-size: $font-size-medium;
+        }
+    }
+}

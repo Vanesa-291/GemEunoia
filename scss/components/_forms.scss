@@ -1,0 +1,94 @@
+// ============================================
+// FORMULARIOS
+// ============================================
+
+.form-container {
+    background-color: $color-white;
+    padding: $spacing-xxlarge;
+    border-radius: $border-radius-medium;
+    box-shadow: $shadow-card;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: $spacing-large;
+    
+    label {
+        display: block;
+        margin-bottom: $spacing-small;
+        font-weight: bold;
+        
+        span {
+            color: $color-accent;
+        }
+    }
+    
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 0.8rem;
+        border: $border-width solid $color-primary;
+        background-color: $color-white;
+        border-radius: $border-radius;
+        font-family: inherit;
+        @include transition;
+        
+        &:focus {
+            outline: none;
+            border-color: $color-accent;
+            box-shadow: 0 0 0 3px rgba(255, 81, 0, 0.1);
+        }
+    }
+    
+    textarea {
+        resize: vertical;
+        min-height: 150px;
+    }
+}
+
+.form-check {
+    margin-bottom: $spacing-medium;
+    
+    .form-check-input {
+        border: $border-width solid $color-primary;
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    
+    .form-check-label {
+        margin-left: $spacing-small;
+        font-weight: 500;
+    }
+}
+
+#successMessage,
+#errorMessage {
+    padding: $spacing-medium;
+    border-radius: $border-radius;
+    margin-bottom: $spacing-large;
+    display: none;
+    
+    i {
+        margin-right: $spacing-small;
+    }
+}
+
+#successMessage {
+    background-color: #d4edda;
+    border: $border-width-thin solid #c3e6cb;
+    color: #155724;
+}
+
+#errorMessage {
+    background-color: #f8d7da;
+    border: $border-width-thin solid #f5c6cb;
+    color: #721c24;
+}
+
+@include responsive(mobile) {
+    .form-container {
+        padding: $spacing-large;
+    }
+}

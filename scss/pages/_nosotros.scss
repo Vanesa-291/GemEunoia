@@ -1,0 +1,24 @@
+// ============================================
+// NOSOTROS PAGE
+// ============================================
+
+.history-content {
+    background-color: $color-white;
+    padding: $spacing-xlarge;
+    border-radius: $border-radius-medium;
+    @include box-shadow;
+    line-height: 1.8;
+    margin-bottom: $spacing-xlarge;
+    text-align: left;
+    
+    p {
+        font-size: $font-size-base;
+        margin-bottom: $spacing-large;
+        color: #555;
+    }
+}
+
+.values-section {
+    padding: $spacing-section $spacing-xlarge;
+    background-color: $color-info-bg;
+}

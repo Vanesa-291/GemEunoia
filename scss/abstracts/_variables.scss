@@ -1,0 +1,159 @@
+// ============================================
+// VARIABLES DE EUNOIA
+// Sistema de diseño centralizado
+// ============================================
+
+// --------------------------------------------
+// PALETA DE COLORES
+// --------------------------------------------
+
+// Colores principales de la marca
+$color-primary: #CD9C8A;      // Beige/rosado - Color principal
+$color-accent: #FF5100;       // Naranja vibrante - Acentos y CTAs
+$color-background: #FFF8E1;   // Crema suave - Fondo general
+$color-dark: #333333;         // Gris oscuro - Texto principal
+$color-white: #ffffff;        // Blanco puro
+
+// Colores funcionales
+$color-info-bg: rgba(205, 156, 138, 0.1);     // Fondo de secciones informativas
+$color-shadow: rgba(0, 0, 0, 0.1);            // Sombras suaves
+$color-shadow-hover: rgba(0, 0, 0, 0.15);     // Sombras al hacer hover
+$color-overlay: rgba(0, 0, 0, 0.3);           // Overlay para imágenes de fondo
+
+// Estados de validación (para formularios)
+$color-success: #28a745;
+$color-error: #dc3545;
+$color-warning: #ffc107;
+$color-info: #17a2b8;
+
+// --------------------------------------------
+// TIPOGRAFÍA
+// --------------------------------------------
+
+// Familias de fuentes
+$font-main: Arial, Helvetica, sans-serif;     // Fuente principal (sans-serif)
+$font-serif: Georgia, serif;                   // Fuente secundaria (serif)
+$font-mono: 'Courier New', monospace;          // Fuente monoespaciada (código)
+
+// Tamaños de fuente (escala modular)
+$font-size-xs: 0.75rem;      // 12px
+$font-size-small: 0.95rem;   // 15px
+$font-size-base: 1rem;       // 16px (tamaño base)
+$font-size-medium: 1.1rem;   // 17.6px
+$font-size-large: 1.3rem;    // 20.8px
+$font-size-xlarge: 1.8rem;   // 28.8px
+$font-size-xxlarge: 2rem;    // 32px
+$font-size-hero: 2.5rem;     // 40px
+$font-size-hero-large: 3.5rem; // 56px
+
+// Pesos de fuente
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Altura de línea
+$line-height-tight: 1.2;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.8;
+
+// --------------------------------------------
+// ESPACIADO (Sistema de 8px)
+// --------------------------------------------
+
+$spacing-xs: 0.3rem;         // ~5px
+$spacing-small: 0.5rem;      // 8px
+$spacing-medium: 1rem;       // 16px
+$spacing-large: 1.5rem;      // 24px
+$spacing-xlarge: 2rem;       // 32px
+$spacing-xxlarge: 4rem;      // 64px
+$spacing-section: 3rem;      // 48px - Para secciones completas
+
+// --------------------------------------------
+// BORDES
+// --------------------------------------------
+
+// Grosores de borde
+$border-width-thin: 1px;
+$border-width: 2px;
+$border-width-thick: 3px;
+$border-width-card: 1px;
+
+// Radios de borde (border-radius)
+$border-radius: 4px;
+$border-radius-medium: 8px;
+$border-radius-large: 12px;
+$border-radius-round: 50px;      // Para botones tipo pill
+$border-radius-circle: 50%;      // Para círculos perfectos
+
+// --------------------------------------------
+// SOMBRAS
+// --------------------------------------------
+
+$shadow-base: 0 2px 8px $color-shadow;
+$shadow-hover: 0 8px 16px $color-shadow-hover;
+$shadow-card: 0 4px 12px $color-shadow;
+$shadow-large: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+// --------------------------------------------
+// TRANSICIONES Y ANIMACIONES
+// --------------------------------------------
+
+$transition-speed: 0.3s;
+$transition-speed-fast: 0.15s;
+$transition-speed-slow: 0.5s;
+$transition-base: all 0.3s ease;
+$transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+// --------------------------------------------
+// BREAKPOINTS RESPONSIVE
+// --------------------------------------------
+
+$breakpoint-mobile: 768px;      // Smartphones
+$breakpoint-tablet: 992px;      // Tablets
+$breakpoint-desktop: 1200px;    // Desktops
+$breakpoint-wide: 1400px;       // Pantallas anchas
+
+// --------------------------------------------
+// Z-INDEX (Para controlar capas)
+// --------------------------------------------
+
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-navbar: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;
+
+// --------------------------------------------
+// GRID SYSTEM (Si no usas Bootstrap)
+// --------------------------------------------
+
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px
+);
+
+// ============================================
+// VARIABLES CSS (Custom Properties)
+// Para uso con JavaScript o temas dinámicos
+// ============================================
+
+:root {
+    --color-primary: #{$color-primary};
+    --color-accent: #{$color-accent};
+    --color-background: #{$color-background};
+    --color-dark: #{$color-dark};
+    --color-white: #{$color-white};
+    
+    --spacing-medium: #{$spacing-medium};
+    --spacing-large: #{$spacing-large};
+    
+    --transition-speed: #{$transition-speed};
+}

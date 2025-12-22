@@ -1,0 +1,11 @@
+// ============================================
+// HOME PAGE (Página de inicio)
+// ============================================
+
+#productos-destacados {
+    background-color: $color-white;
+    
+    .card {
+        margin: $spacing-large;
+    }
+}

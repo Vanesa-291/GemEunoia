@@ -1,0 +1,91 @@
+// ============================================
+// HELPERS - UTILIDADES
+// ============================================
+
+// Colores de texto con @each
+$colors: (
+    'primary': $color-primary,
+    'accent': $color-accent,
+    'dark': $color-dark,
+    'white': $color-white
+);
+
+@each $name, $color in $colors {
+    .text-#{$name} {
+        color: $color !important;
+    }
+    .bg-#{$name} {
+        background-color: $color !important;
+    }
+}
+
+// Espaciados con @each
+$spacings: (
+    'xs': $spacing-xs,
+    'sm': $spacing-small,
+    'md': $spacing-medium,
+    'lg': $spacing-large,
+    'xl': $spacing-xlarge
+);
+
+@each $name, $size in $spacings {
+    .m-#{$name} { margin: $size !important; }
+    .mt-#{$name} { margin-top: $size !important; }
+    .mb-#{$name} { margin-bottom: $size !important; }
+    .p-#{$name} { padding: $size !important; }
+}
+
+// Anchos con @for
+@for $i from 1 through 10 {
+    .w-#{$i * 10} {
+        width: #{$i * 10%};
+    }
+}
+
+// Variantes de botones con @each
+$button-variants: (
+    'primary': $color-primary,
+    'accent': $color-accent,
+    'dark': $color-dark
+);
+
+@each $name, $color in $button-variants {
+    .btn-#{$name} {
+        @include button-style($color, $color-white);
+        
+        &:hover {
+            background-color: darken($color, 10%);
+        }
+    }
+}
+
+// Animaciones
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slideIn {
+    animation: slideInLeft 0.5s ease-out;
+}
