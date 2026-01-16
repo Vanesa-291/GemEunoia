@@ -1,0 +1,41 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// ============================================
+// HEADER (Encabezado general)
+// ============================================
+
+header {
+    background-color: $color-primary;
+    color: $color-white;
+    padding: $spacing-medium $spacing-xlarge;
+    overflow: hidden;
+}
+
+.page-header {
+    background: linear-gradient(135deg, $color-primary 0%, rgba(205, 156, 138, 0.8) 100%);
+    color: $color-white;
+    padding: $spacing-xxlarge $spacing-xlarge;
+    text-align: center;
+    margin-bottom: $spacing-xxlarge;
+    
+    h1 {
+        font-size: $font-size-hero;
+        font-weight: bold;
+        color: $color-white;
+        border: none;
+    }
+    
+    p {
+        font-size: $font-size-medium;
+        margin-top: $spacing-medium;
+    }
+}
+
+@include responsive(mobile) {
+    .page-header {
+        h1 {
+            font-size: $font-size-xlarge;
+        }
+    }
+}

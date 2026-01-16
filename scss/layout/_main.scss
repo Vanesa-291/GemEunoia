@@ -1,0 +1,66 @@
+@use "../abstracts/variables" as *;
+
+// ============================================
+// MAIN (Contenido principal)
+// ============================================
+
+main {
+    min-height: 70vh;
+}
+
+section {
+    padding: $spacing-xxlarge $spacing-medium;
+    text-align: center;
+}
+
+h2 {
+    font-size: $font-size-xxlarge;
+    color: $color-accent;
+    border-bottom: $border-width-thick solid $color-primary;
+    display: inline-block;
+    padding-bottom: $spacing-small;
+    margin-bottom: $spacing-xlarge;
+    font-weight: bold;
+}
+
+h3 {
+    color: $color-accent;
+    margin-bottom: $spacing-small;
+}
+
+.seccion-info {
+    padding: $spacing-xxlarge $spacing-xlarge;
+    background-color: $color-info-bg;
+    
+    p {
+        font-size: $font-size-medium;
+        margin-bottom: $spacing-medium;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+}
+
+.info-contacto {
+    text-align: left;
+    margin: $spacing-xlarge auto;
+    max-width: 600px;
+    
+    p {
+        margin: $spacing-medium 0;
+        text-align: left;
+    }
+    
+    a {
+        color: $color-accent;
+    }
+}
+
+.contenedor-cards {
+    text-align: center;
+}
+
+.seccion-cards {
+    padding: $spacing-xxlarge $spacing-medium;
+}
