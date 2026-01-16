@@ -1,13 +1,59 @@
-@use "../abstracts/variables" as *;
-
 // ============================================
 // HOME PAGE (Página de inicio)
 // ============================================
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 #productos-destacados {
     background-color: $color-white;
     
     .card {
         margin: $spacing-large;
+    }
+}
+
+.contenedor-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $spacing-large;
+    padding: 0 $spacing-medium;
+}
+
+// ============================================
+// RESPONSIVE HOME - MOBILE
+// ============================================
+
+@include responsive(mobile) {
+    #productos-destacados {
+        padding: $spacing-xlarge $spacing-small;
+    }
+    
+    .contenedor-cards {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 $spacing-small;
+        gap: $spacing-medium;
+    }
+    
+    // ✅ Cards ocupan 100% del ancho en mobile
+    .card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+}
+
+// Tablet: 2 columnas
+@include responsive(tablet) {
+    .contenedor-cards {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .card {
+        width: calc(50% - 2rem);
+        max-width: 400px;
     }
 }

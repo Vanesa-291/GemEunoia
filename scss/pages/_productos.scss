@@ -34,3 +34,60 @@
         color: $color-primary;
     }
 }
+// ============================================
+// RESPONSIVE PRODUCTOS
+// ============================================
+
+@include responsive(mobile) {
+    .filters-section {
+        padding: $spacing-medium;
+        margin-bottom: $spacing-xlarge;
+        
+        h3 {
+            font-size: $font-size-large;
+        }
+    }
+    
+    .filter-btn {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+        margin: 0.25rem;
+    }
+    
+    .products-grid {
+        padding: 0 $spacing-small; // ✅ NUEVO
+        
+        .col-lg-4,
+        .col-md-6,
+        .col-sm-12 {
+            padding-left: $spacing-small !important;
+            padding-right: $spacing-small !important;
+        }
+        
+        .product-item {
+            margin-bottom: $spacing-large;
+        }
+    }
+    
+    .card {
+        width: 100% !important; // ✅ Forzar ancho completo
+        max-width: 100% !important;
+    }
+    
+    .card-body {
+        padding: $spacing-medium;
+        
+        h3 {
+            font-size: $font-size-medium;
+        }
+        
+        p[style*="font-size: 1.3rem"] {
+            font-size: $font-size-medium !important;
+        }
+        
+        .btn {
+            font-size: $font-size-small;
+            padding: $spacing-small $spacing-medium;
+        }
+    }
+}

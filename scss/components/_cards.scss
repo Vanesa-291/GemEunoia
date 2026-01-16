@@ -142,11 +142,15 @@
     .card-body {
         padding: $spacing-medium; // ✅ Menos padding en mobile
     }
+    .card-content {
+        padding: $spacing-medium;
+    }
     
     .contact-info-card,
     .value-card {
         padding: $spacing-large;
         margin-bottom: $spacing-medium;
+        width: 100%;
     }
     
     .contact-icon,
@@ -159,5 +163,6 @@
     .card {
         width: calc(50% - 2rem); // ✅ 2 columnas en tablet
         margin: $spacing-medium;
+        max-width: 400px;
     }
 }

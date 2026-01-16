@@ -31,3 +31,52 @@
 @use "./pages/contacto";
 @use "./pages/nosotros";
 @use "./pages/faq";
+
+// ============================================
+// FIX RESPONSIVE CARDS - MOBILE
+// ============================================
+
+@media (max-width: 768px) {
+    // HOME - Cards de inicio
+    .contenedor-cards {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 0 0.5rem !important;
+        width: 100% !important;
+    }
+    
+    .card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 1rem auto !important;
+        display: block !important;
+    }
+    
+    // PRODUCTOS - Grid de Bootstrap
+    .product-item {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+    
+    .products-grid .card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 1rem 0 !important;
+    }
+    
+    .card-img-container {
+        height: 220px !important;
+        width: 100% !important;
+    }
+    
+    .card-img-top {
+        height: 220px !important;
+        width: 100% !important;
+    }
+    
+    .card-content,
+    .card-body {
+        padding: 1rem !important;
+    }
+}

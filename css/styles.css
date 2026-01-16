@@ -436,7 +436,7 @@ h3 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../img/pulsera-12.jpg");
+  background-image: url("../img/pulsera-12.JPG");
   background-size: cover;
   background-position: center;
   z-index: 1;
@@ -811,10 +811,14 @@ h3 {
   .card-body {
     padding: 1rem;
   }
+  .card-content {
+    padding: 1rem;
+  }
   .contact-info-card,
   .value-card {
     padding: 1.5rem;
     margin-bottom: 1rem;
+    width: 100%;
   }
   .contact-icon,
   .value-icon {
@@ -825,6 +829,7 @@ h3 {
   .card {
     width: calc(50% - 2rem);
     margin: 1rem;
+    max-width: 400px;
   }
 }
 .form-container {
@@ -919,6 +924,40 @@ h3 {
   margin: 1.5rem;
 }
 
+.contenedor-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  #productos-destacados {
+    padding: 2rem 0.5rem;
+  }
+  .contenedor-cards {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0.5rem;
+    gap: 1rem;
+  }
+  .card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+}
+@media (max-width: 992px) {
+  .contenedor-cards {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .card {
+    width: calc(50% - 2rem);
+    max-width: 400px;
+  }
+}
 .filters-section {
   background-color: #ffffff;
   padding: 2rem;
@@ -943,6 +982,49 @@ h3 {
   color: #CD9C8A;
 }
 
+@media (max-width: 768px) {
+  .filters-section {
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  .filters-section h3 {
+    font-size: 1.3rem;
+  }
+  .filter-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+    margin: 0.25rem;
+  }
+  .products-grid {
+    padding: 0 0.5rem;
+  }
+  .products-grid .col-lg-4,
+  .products-grid .col-md-6,
+  .products-grid .col-sm-12 {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  .products-grid .product-item {
+    margin-bottom: 1.5rem;
+  }
+  .card {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .card-body {
+    padding: 1rem;
+  }
+  .card-body h3 {
+    font-size: 1.1rem;
+  }
+  .card-body p[style*="font-size: 1.3rem"] {
+    font-size: 1.1rem !important;
+  }
+  .card-body .btn {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+}
 .contacto-mail {
   color: #FF5100;
   font-weight: bold;
@@ -1046,6 +1128,42 @@ section[style*="padding: 4rem 2rem"] {
   }
   .faq-answer {
     font-size: 0.95rem;
+  }
+}
+@media (max-width: 768px) {
+  .contenedor-cards {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 0 0.5rem !important;
+    width: 100% !important;
+  }
+  .card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 1rem auto !important;
+    display: block !important;
+  }
+  .product-item {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  .products-grid .card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 1rem 0 !important;
+  }
+  .card-img-container {
+    height: 220px !important;
+    width: 100% !important;
+  }
+  .card-img-top {
+    height: 220px !important;
+    width: 100% !important;
+  }
+  .card-content,
+  .card-body {
+    padding: 1rem !important;
   }
 }
 
