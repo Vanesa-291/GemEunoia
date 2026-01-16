@@ -10,6 +10,7 @@
 // Mixin para centrar elementos con flexbox
 // Uso: @include flex-center;
 @use "sass:color";
+@use "variables" as *;
 @mixin flex-center {
     display: flex;
     align-items: center;

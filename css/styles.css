@@ -199,7 +199,7 @@ ul {
   transition: all 0.3s ease;
 }
 .btn-primary:hover {
-  background-color: rgb(164, 124.8, 110.4);
+  background-color: rgb(168.8443113772, 98.1317365269, 72.1556886228);
   color: #ffffff;
   transform: translateY(-2px);
 }
@@ -221,7 +221,7 @@ ul {
   transition: all 0.3s ease;
 }
 .btn-accent:hover {
-  background-color: rgb(204, 64.8, 0);
+  background-color: rgb(153, 48.6, 0);
   color: #ffffff;
   transform: translateY(-2px);
 }
@@ -243,7 +243,7 @@ ul {
   transition: all 0.3s ease;
 }
 .btn-dark:hover {
-  background-color: rgb(40.8, 40.8, 40.8);
+  background-color: black;
   color: #ffffff;
   transform: translateY(-2px);
 }
@@ -436,7 +436,7 @@ h3 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../img/pulsera-01.jpg");
+  background-image: url("../img/pulsera-12.jpg");
   background-size: cover;
   background-position: center;
   z-index: 1;
@@ -564,7 +564,7 @@ h3 {
   transition: all 0.3s ease;
 }
 .card-btn:hover {
-  background-color: rgb(204, 64.8, 0);
+  background-color: rgb(153, 48.6, 0);
   color: #ffffff;
   transform: translateY(-2px);
 }
@@ -587,7 +587,7 @@ h3 {
   transition: all 0.3s ease;
 }
 .btn-hero-imagen:hover {
-  background-color: rgb(204, 64.8, 0);
+  background-color: rgb(153, 48.6, 0);
   color: #ffffff;
   transform: translateY(-2px);
 }
@@ -616,7 +616,7 @@ h3 {
   transition: all 0.3s ease;
 }
 .btn-custom:hover {
-  background-color: rgb(204, 64.8, 0);
+  background-color: rgb(153, 48.6, 0);
   color: #ffffff;
   transform: translateY(-2px);
 }
@@ -635,7 +635,7 @@ h3 {
   transition: all 0.3s ease;
 }
 .btn-submit:hover {
-  background-color: rgb(204, 64.8, 0);
+  background-color: rgb(153, 48.6, 0);
   color: #ffffff;
   transform: translateY(-2px);
 }
@@ -697,11 +697,13 @@ h3 {
   width: 100%;
   height: 200px;
   border-bottom: 2px solid #CD9C8A;
+  overflow: hidden;
 }
 .card-img-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .card-content {
@@ -717,8 +719,10 @@ h3 {
 
 .card-img-top {
   height: 250px;
+  width: 100%;
   object-fit: cover;
   border-bottom: 2px solid #CD9C8A;
+  display: block;
 }
 
 .card-body {
@@ -787,15 +791,40 @@ h3 {
 
 @media (max-width: 768px) {
   .card {
-    width: 90%;
+    width: 100%;
+    max-width: 400px;
     display: block;
     margin: 1rem auto;
+  }
+  .card-img-container {
+    height: 220px;
+  }
+  .card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .card-img-top {
+    height: 220px;
+    width: 100%;
+  }
+  .card-body {
+    padding: 1rem;
+  }
+  .contact-info-card,
+  .value-card {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .contact-icon,
+  .value-icon {
+    font-size: 2rem;
   }
 }
 @media (max-width: 992px) {
   .card {
-    width: 45%;
-    margin: 1rem auto;
+    width: calc(50% - 2rem);
+    margin: 1rem;
   }
 }
 .form-container {
